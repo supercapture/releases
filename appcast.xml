@@ -3,5 +3,16 @@
     <channel>
         <title>Supercapture Updates</title>
         <language>en</language>
-    </channel>
+            <item>
+            <title>Version 1.0.39</title>
+            <sparkle:releaseNotesLink>https://github.com/supercapture/releases/releases/tag/v1.0.39</sparkle:releaseNotesLink>
+            <pubDate>Sat, 14 Mar 2026 05:59:38 -0400</pubDate>
+            <enclosure url="https://github.com/supercapture/releases/releases/download/v1.0.39/SuperCapture-1.0.39.zip"
+                sparkle:version="1.0.39"
+                sparkle:os="macos"
+                sparkle:signature="+Pgr4CNLhVbJwSizwgcUpuk8sqRbTzWVmOEv/usU03+NWydesX+5dNUmusIfgwHF7ykaatW5Fix9qMG80IsPDA=="
+                length="110411909"
+                type="application/octet-stream" />
+        </item>
+</channel>
 </rss>
