@@ -9,9 +9,23 @@ A screenshot annotation tool for macOS.
 3. Launch **Supercapture** from your Applications folder
 4. Grant **Screen Recording** permission when prompted
 
-## Install the Chrome Extension
+## Browser Extensions
 
-The Chrome extension enables browser-based captures: full-page screenshots, area selection, and multi-page slideshow capture (DocSend, Google Slides, Canva, and more).
+The browser extensions enable full-page screenshots, area selection, and multi-page slideshow capture (DocSend, Google Slides, Canva, and more).
+
+> The extensions communicate with the desktop app over localhost. Supercapture must be running for the extensions to work.
+
+### Safari Extension
+
+The Safari extension is included with Supercapture — no separate download needed.
+
+1. Open **Safari → Settings → Extensions** (or Safari → Preferences → Extensions)
+2. Check the box next to **Supercapture**
+3. When prompted, choose which websites the extension can access (or select **All Websites**)
+
+The Supercapture icon will appear in your Safari toolbar. You can also right-click any page for capture options.
+
+### Chrome Extension
 
 1. Download **supercapture-chrome-extension-*.zip** from the [latest release](https://github.com/supercapture/releases/releases/latest)
 2. Unzip the file
@@ -20,10 +34,8 @@ The Chrome extension enables browser-based captures: full-page screenshots, area
 5. Click **Load unpacked** and select the unzipped folder
 6. The Supercapture icon will appear in your Chrome toolbar
 
-> The extension communicates with the desktop app over localhost. Supercapture must be running for the extension to work.
-
 ## Updating
 
 Supercapture checks for updates automatically. You can also check manually via the app menu: **Supercapture → Check for Updates...**
 
-When a new version is available, download the updated Chrome extension zip from the release page and repeat the install steps above (Chrome will update the existing extension in place).
+The Safari extension updates automatically with the app. For Chrome, download the updated extension zip from the release page and repeat the install steps above (Chrome will update the existing extension in place).
