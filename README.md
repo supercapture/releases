@@ -25,17 +25,19 @@ The Safari extension is included with Supercapture — no separate download need
 
 The Supercapture icon will appear in your Safari toolbar. You can also right-click any page for capture options.
 
-### Chrome Extension
+### Chrome / Edge Extension
+
+The same extension works in both Chrome and Microsoft Edge.
 
 1. Download **supercapture-chrome-extension-*.zip** from the [latest release](https://github.com/supercapture/releases/releases/latest)
 2. Unzip the file
-3. Open Chrome and go to `chrome://extensions`
+3. Open Chrome (`chrome://extensions`) or Edge (`edge://extensions`)
 4. Enable **Developer mode** (toggle in the top-right corner)
 5. Click **Load unpacked** and select the unzipped folder
-6. The Supercapture icon will appear in your Chrome toolbar
+6. The Supercapture icon will appear in your browser toolbar
 
 ## Updating
 
 Supercapture checks for updates automatically. You can also check manually via the app menu: **Supercapture → Check for Updates...**
 
-The Safari extension updates automatically with the app. For Chrome, download the updated extension zip from the release page and repeat the install steps above (Chrome will update the existing extension in place).
+The Safari extension updates automatically with the app. For Chrome/Edge, download the updated extension zip from the release page and repeat the install steps above (the browser will update the existing extension in place).
