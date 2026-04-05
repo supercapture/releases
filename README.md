@@ -103,7 +103,7 @@ Add the following to your MCP client's config file:
 | Claude Desktop | `~/Library/Application Support/Claude/claude_desktop_config.json` |
 | Cursor | Cursor Settings → MCP |
 | Windsurf | `~/.codeium/windsurf/mcp_config.json` |
-| Yolobox | Settings → MCP Servers |
+| VS Code (Copilot) | `.vscode/mcp.json` in workspace |
 
 For other MCP clients, point them at `http://localhost:21516/mcp` (JSON-RPC 2.0 over Streamable HTTP).
 
