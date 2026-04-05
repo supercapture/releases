@@ -79,25 +79,11 @@ Run `supercapture help` for full usage. Requires the Supercapture desktop app to
 
 ## MCP Server
 
-Supercapture exposes an [MCP](https://modelcontextprotocol.io) server with 150+ tools for capturing screenshots, annotating images, managing gallery items, recording video, and more. Any MCP-compatible client can connect — including Claude Code, Claude Desktop, Cursor, and custom agents.
+Supercapture exposes an [MCP](https://modelcontextprotocol.io) server with 150+ tools for capturing screenshots, annotating images, managing gallery items, recording video, and more. Any MCP-compatible client running on the same machine can connect — no authentication required for local connections.
 
-### Claude Code
+### Configuration
 
-Add to `~/.claude/settings.json`:
-
-```json
-{
-  "mcpServers": {
-    "supercapture": {
-      "url": "http://localhost:21516/mcp"
-    }
-  }
-}
-```
-
-### Claude Desktop
-
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+Add the following to your MCP client's config file:
 
 ```json
 {
@@ -109,9 +95,17 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 }
 ```
 
-### Other MCP Clients
+**Config file locations by client:**
 
-Connect to `http://localhost:21516/mcp` using JSON-RPC 2.0 over HTTP. The server supports Streamable HTTP (SSE) transport. No authentication is required for local connections.
+| Client | Config File |
+|--------|------------|
+| Claude Code | `~/.claude/settings.json` |
+| Claude Desktop | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Cursor | Cursor Settings → MCP |
+| Windsurf | `~/.codeium/windsurf/mcp_config.json` |
+| Yolobox | Settings → MCP Servers |
+
+For other MCP clients, point them at `http://localhost:21516/mcp` (JSON-RPC 2.0 over Streamable HTTP).
 
 Run `supercapture tools` (CLI) or send a `tools/list` request to see all available tools.
 
