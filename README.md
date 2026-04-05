@@ -77,6 +77,43 @@ supercapture call gallery_list limit=5
 
 Run `supercapture help` for full usage. Requires the Supercapture desktop app to be running.
 
+## Headless Browser Automation
+
+Supercapture can launch a headless browser for fully automated CLI capture workflows — no visible window, no user interaction needed. This is useful for scripting screenshot capture of web pages, presentations, and local HTML files.
+
+```bash
+supercapture call browser_launch url=https://news.yahoo.com width=1800 height=1200
+supercapture call capture_visible_page tab_url=news.yahoo.com
+supercapture call browser_close
+```
+
+### Requirements
+
+Headless mode requires **Chromium** (Google Chrome does not support loading unpacked extensions programmatically).
+
+```bash
+brew install chromium
+```
+
+On first run, macOS Gatekeeper may block Chromium. Remove the quarantine attribute:
+
+```bash
+xattr -cr /opt/homebrew/Caskroom/chromium/*/chrome-mac/Chromium.app
+```
+
+### Available Tools
+
+| Tool | Description |
+|------|-------------|
+| `browser_launch` | Launch headless Chromium with the extension. Optional: `url`, `width`, `height` (default 1800x1200) |
+| `browser_close` | Close the headless browser and clean up |
+| `extension_open_tab` | Open a URL in the headless browser (`file:///` supported) |
+| `capture_visible_page` | Capture the visible viewport (use `tab_url` to target a specific tab) |
+| `capture_full_page` | Capture a full scrolling page |
+| `capture_presentation` | Auto-detect and capture all slides from a presentation |
+
+All capture and automation tools accept `tab_url` for URL-based tab matching, in addition to the existing `tab_title`.
+
 ## MCP Server
 
 Supercapture exposes an [MCP](https://modelcontextprotocol.io) server with 150+ tools for capturing screenshots, annotating images, managing gallery items, recording video, and more. Any MCP-compatible client running on the same machine can connect — no authentication required for local connections.
