@@ -27,21 +27,28 @@ The Supercapture icon will appear in your Safari toolbar. You can also right-cli
 
 ### Chrome / Edge / Brave Extension
 
-The same extension works in all Chromium-based browsers.
+The same extension works in all Chromium-based browsers. The extension is bundled inside the app — no separate download needed.
 
-1. Download **supercapture-chrome-extension-*.zip** from the [latest release](https://github.com/supercapture/releases/releases/latest)
-2. Unzip the file
-3. Open your browser's extensions page: Chrome (`chrome://extensions`), Edge (`edge://extensions`), or Brave (`brave://extensions`)
-4. Enable **Developer mode** (toggle in the top-right corner)
-5. Click **Load unpacked** and select the unzipped folder
-6. The Supercapture icon will appear in your browser toolbar
+1. Open your browser's extensions page: Chrome (`chrome://extensions`), Edge (`edge://extensions`), or Brave (`brave://extensions`)
+2. Enable **Developer mode** (toggle in the top-right corner)
+3. Click **Load unpacked** and select:
+   ```
+   /Applications/Supercapture.app/Contents/Resources/Extensions/chrome
+   ```
+4. The Supercapture icon will appear in your browser toolbar
+
+> **Tip:** You can paste the path above into the folder selection dialog's **Go to Folder** field (Cmd+Shift+G in Finder).
 
 ### Firefox Extension
 
-1. Download **supercapture-firefox-extension-*.zip** from the [latest release](https://github.com/supercapture/releases/releases/latest)
-2. Open Firefox and go to `about:debugging#/runtime/this-firefox`
-3. Click **Load Temporary Add-on** and select any file from the unzipped folder
-4. The Supercapture icon will appear in your Firefox toolbar
+The extension is bundled inside the app — no separate download needed.
+
+1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
+2. Click **Load Temporary Add-on** and select:
+   ```
+   /Applications/Supercapture.app/Contents/Resources/Extensions/firefox/manifest.json
+   ```
+3. The Supercapture icon will appear in your Firefox toolbar
 
 > Temporary add-ons are removed when Firefox restarts. For permanent installation, the extension needs to be signed via [addons.mozilla.org](https://addons.mozilla.org).
 
@@ -49,4 +56,4 @@ The same extension works in all Chromium-based browsers.
 
 Supercapture checks for updates automatically. You can also check manually via the app menu: **Supercapture → Check for Updates...**
 
-The Safari extension updates automatically with the app. For other browsers, download the updated extension zip from the release page and repeat the install steps above (the browser will update the existing extension in place).
+All browser extensions update automatically with the app. After an app update, reload the extension in your browser's extension manager to pick up the new version.
