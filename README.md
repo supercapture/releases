@@ -52,6 +52,31 @@ The extension is bundled inside the app — no separate download needed.
 
 > Temporary add-ons are removed when Firefox restarts. For permanent installation, the extension needs to be signed via [addons.mozilla.org](https://addons.mozilla.org).
 
+## Command-Line Interface
+
+Supercapture includes a CLI tool for scripting captures, managing gallery items, and controlling the app from the terminal.
+
+```bash
+# Add to your PATH (one-time setup)
+ln -s /Applications/Supercapture.app/Contents/MacOS/supercapture-cli /usr/local/bin/supercapture
+
+# Check if the app is running
+supercapture status
+
+# List available tools
+supercapture tools
+
+# Search for capture-related tools
+supercapture tools capture
+
+# Call a tool
+supercapture call app_get_state
+supercapture call capture_self -o screenshot.png
+supercapture call gallery_list limit=5
+```
+
+Run `supercapture help` for full usage. Requires the Supercapture desktop app to be running.
+
 ## Updating
 
 Supercapture checks for updates automatically. You can also check manually via the app menu: **Supercapture → Check for Updates...**
