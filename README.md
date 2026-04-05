@@ -77,6 +77,44 @@ supercapture call gallery_list limit=5
 
 Run `supercapture help` for full usage. Requires the Supercapture desktop app to be running.
 
+## MCP Server
+
+Supercapture exposes an [MCP](https://modelcontextprotocol.io) server with 150+ tools for capturing screenshots, annotating images, managing gallery items, recording video, and more. Any MCP-compatible client can connect — including Claude Code, Claude Desktop, Cursor, and custom agents.
+
+### Claude Code
+
+Add to `~/.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "supercapture": {
+      "url": "http://localhost:21516/mcp"
+    }
+  }
+}
+```
+
+### Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "supercapture": {
+      "url": "http://localhost:21516/mcp"
+    }
+  }
+}
+```
+
+### Other MCP Clients
+
+Connect to `http://localhost:21516/mcp` using JSON-RPC 2.0 over HTTP. The server supports Streamable HTTP (SSE) transport. No authentication is required for local connections.
+
+Run `supercapture tools` (CLI) or send a `tools/list` request to see all available tools.
+
 ## Updating
 
 Supercapture checks for updates automatically. You can also check manually via the app menu: **Supercapture → Check for Updates...**
